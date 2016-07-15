@@ -1,0 +1,30 @@
+{
+    "name": "pcms-automated-testing",
+    "description": "PCMS Automated Testing with Behat and Mink",
+    "type": "project",
+    "require": {
+        "php":">=5.4.0",
+        "behat/behat": "^3.1",
+        "behat/mink": "^1.7",
+        "behat/mink-extension": "^2.2",
+        "behat/mink-selenium2-driver": "^1.3",
+        "behat/mink-goutte-driver": "^1.2",
+        "beberlei/assert": "^2.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dodik Gaghan S",
+            "email": "dodik@dinkuminteractive.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Features\\": "features/"
+        }
+    },
+    "config": {
+        "vendor-dir": "vendor/",
+        "bin-dir": "bin/"
+    }
+}
