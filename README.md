@@ -1,2 +1,2 @@
-# hiline-automated-testing
-Hiline Automated Testing
+# Hiline Automated Testing
+Behat Mink with PhantomJS
