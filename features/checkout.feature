@@ -7,7 +7,7 @@ Feature: Checkout Process
 Scenario: Add product to cart and then checkout
 	Given I am on "/shop/chocolate-donut/"
 	When I press "Add to cart"
-		And I wait for 5 seconds
+		And I wait for 3 seconds
 		Then I should see "Successfully Added to Your Cart"
 	Given I am on "/checkout/"
 	When I follow "Continue as guest"
@@ -37,4 +37,7 @@ Scenario: Add product to cart and then checkout
 		And I wait for 5 seconds
 		And I press "Submit Order"
 		And I wait for 30 seconds
-		Then I should see "THANK YOU"
+		Then print current URL
+		Then the url should match "(\/checkout\/order-received\/[0-9]{1,6})"
+		#Then the url should match "/checkout/order-received/"
+		#Then I should see a ".thanks-galleries" element
